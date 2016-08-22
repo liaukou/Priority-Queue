@@ -18,6 +18,7 @@ class Node {
 				this.right = node;
 			};
 		};
+
 	}
 
 	removeChild(node) {
@@ -36,7 +37,7 @@ class Node {
 			//nothing
 		} else {
 			this.parent.removeChild(this);
-		}
+		};
 	}
 
 	swapWithParent() {
@@ -56,15 +57,12 @@ class Node {
 
 			if (this === this.parent.left) {
 				nodeLeft = this.parent;
-				if (this.parent.right) {
-					nodeRight = this.parent.right;
+				if (nodeRight = this.parent.right) {
 					this.parent.right.parent = this;
 				}
-			};
-			if (this === this.parent.right) {
+			} else if (this === this.parent.right) {
 				nodeRight = this.parent;
-				nodeLeft = this.parent.left;
-				if (this.parent.left) {
+				if (nodeLeft = this.parent.left) {
 					this.parent.left.parent = this;
 				};
 			};
@@ -76,10 +74,6 @@ class Node {
 				} else {
 					this.parent.parent.right = this;
 				};
-			};
-			if (!this.parent.parent) {
-				this.parent.parent = this;
-				nodeParent = null;
 			};
 
 			this.parent.parent = this;
