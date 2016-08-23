@@ -120,7 +120,7 @@ class MaxHeap {
 						temp.parentNodes[nodeLeftIndex] = node;
 					};
 
-					if (this.root == node) {
+					if (this.root === node) {
 						this.root = node.left;
 					};
 
@@ -141,7 +141,7 @@ class MaxHeap {
 						temp.parentNodes[nodeIndex] = node.left;
 					};
 
-					if (this.root == node) {
+					if (this.root === node) {
 						this.root = node.right;
 					};
 
@@ -164,7 +164,7 @@ class MaxHeap {
 				 temp.parentNodes[nodeIndex] = node.left;
 			 };
 
-			 if (this.root == node) {
+			 if (this.root === node) {
 				 this.root = node.right;
 			 };
 
